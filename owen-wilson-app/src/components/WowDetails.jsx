@@ -56,12 +56,14 @@ function WowDetails() {
                     <h3>Nombre: {firstWow.movie}</h3>
                     <p>Director: {firstWow.director}</p>
                     <p>Fecha: {firstWow.release_date}</p>
+                    <p>Personaje: {firstWow.character}</p>
                 </div>
                 <div className="movie-card">
                     <h2>Último "Wow" de todas las películas</h2>
                     <h3>Nombre: {lastWow.movie}</h3>
                     <p>Director: {lastWow.director}</p>
                     <p>Fecha: {lastWow.release_date}</p>
+                    <p>Personaje: {lastWow.character}</p>
                 </div>
                 <div>
                     {medianWows.map((wow) => (
@@ -70,6 +72,7 @@ function WowDetails() {
                             <h3>Nombre: {wow.movie}</h3>
                             <p>Director: {wow.director}</p>
                             <p>Fecha: {wow.release_date}</p>
+                            <p>Personaje: {wow.character}</p>
                         </div>
                     ))}
                 </div>

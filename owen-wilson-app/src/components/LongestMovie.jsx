@@ -55,6 +55,7 @@ function LongestMovie() {
                     <h3>{longestMovie.movie}</h3>
                     <p>Director: {longestMovie.director}</p>
                     <p>Duración: {longestMovie.movie_duration}</p>
+                    <p>Cantidad de wows: {longestMovie.total_wows_in_movie}</p>
                 </div>
             </div>
             <button onClick={handleBackClick}>Volver</button>
