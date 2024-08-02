@@ -35,7 +35,7 @@ function WowDetails() {
 
     const navigate = useNavigate();
 
-    if (isLoading) return <div>Cargando...</div>;
+    if (isLoading) return <div>Cargando todos los wows...</div>;
 
     if (wows.length === 0) return <div>No se encontraron datos de "wows".</div>;
 
@@ -50,27 +50,29 @@ function WowDetails() {
 
     return (
         <div className='wow-details'>
-            <div>
-                <h2>Primer "Wow" de todas las películas</h2>
-                <p>Nombre: {firstWow.movie}</p>
-                <p>Director: {firstWow.director}</p>
-                <p>Fecha: {firstWow.release_date}</p>
-            </div>
-            <div>
-                <h2>Último "Wow" de todas las películas</h2>
-                <p>Nombre: {lastWow.movie}</p>
-                <p>Director: {lastWow.director}</p>
-                <p>Fecha: {lastWow.release_date}</p>
-            </div>
-            <div>
-                <h2>Mediana de "Wow" de todas las películas</h2>
-                {medianWows.map((wow, index) => (
-                    <div key={index}>
-                        <p>Nombre: {wow.movie}</p>
-                        <p>Director: {wow.director}</p>
-                        <p>Fecha: {wow.release_date}</p>
-                    </div>
-                ))}
+            <div className='movies-container'>
+                <div className="movie-card">
+                    <h2>Primer "Wow" de todas las películas</h2>
+                    <h3>Nombre: {firstWow.movie}</h3>
+                    <p>Director: {firstWow.director}</p>
+                    <p>Fecha: {firstWow.release_date}</p>
+                </div>
+                <div className="movie-card">
+                    <h2>Último "Wow" de todas las películas</h2>
+                    <h3>Nombre: {lastWow.movie}</h3>
+                    <p>Director: {lastWow.director}</p>
+                    <p>Fecha: {lastWow.release_date}</p>
+                </div>
+                <div>
+                    {medianWows.map((wow) => (
+                        <div className="movie-card">
+                            <h2>Mediana de "Wow" de todas las películas</h2>
+                            <h3>Nombre: {wow.movie}</h3>
+                            <p>Director: {wow.director}</p>
+                            <p>Fecha: {wow.release_date}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
             <button onClick={handleBackClick}>Volver</button>
         </div>
