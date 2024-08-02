@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Movies.css';
 
 
 function Movies() {
@@ -27,14 +28,16 @@ function Movies() {
     
     return (
         <div className='movies'>
-            <h2>Lista de películas en las que Owen Wilson dice "Wow"</h2>
-            <button onClick={sortMovies}>Ordenar películas</button>
-            <ul>
-                {movies.map((movie, index) => (
-                    <li key={index}>{movie}</li>
-                ))}
-            </ul>
-            <button onClick={handleBackClick}>Volver</button>
+        <h2>Lista de películas en las que Owen Wilson dice "Wow"</h2>
+        <button className="sort-button" onClick={sortMovies}>Ordenar películas</button>
+        <div className='movies-container'> 
+            {movies.map((movie) => (
+                <div className="movie-card">
+                    <h3>{movie}</h3>
+                </div>
+            ))}
+        </div>
+        <button onClick={handleBackClick}>Volver</button>
         </div>
     );
 }

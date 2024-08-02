@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/LongestMovie.css';
 
 function LongestMovie() {
 
@@ -46,10 +47,16 @@ function LongestMovie() {
     return (
         <div className='longest-movie'>
             <h2>Película más larga en la que Owen Wilson dice "Wow"</h2>
-            <p>{longestMovie.movie}</p>
-            <p>Director: {longestMovie.director}</p>
-            <p>Duración: {longestMovie.movie_duration}</p>
-            <img src={longestMovie.poster} alt={`${longestMovie.movie} poster`}/>
+            <div className='movie-card'>
+                <div className='poster-container'>
+                    <img className='movie-poster' src={longestMovie.poster} alt={`${longestMovie.movie} poster`}/>
+                </div>
+                <div className='movie-details'>
+                    <h3>{longestMovie.movie}</h3>
+                    <p>Director: {longestMovie.director}</p>
+                    <p>Duración: {longestMovie.movie_duration}</p>
+                </div>
+            </div>
             <button onClick={handleBackClick}>Volver</button>
         </div>
     );

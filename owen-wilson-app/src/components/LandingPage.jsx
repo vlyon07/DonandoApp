@@ -25,7 +25,7 @@ function LandingPage() {
   return (
     <div className='landing-page'>
         <>
-        <h1>Bienvenido a la Owen Wilson wow app!</h1>
+        <h1>Bienvenido a la Owen Wilson Wow-App!</h1>
         <p>Presiona los botones para hacer las consultas</p>
         <button onClick={handleMoviesClick} className='movies-button'>Show all movies</button>
         <button onClick={handleDirectorClick} className='directors-button'>Show all directors</button>
