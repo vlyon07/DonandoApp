@@ -21,7 +21,7 @@ function Movies() {
 
     const navigate = useNavigate();
 
-    const habdleBackClick = () => {
+    const handleBackClick = () => {
         navigate('/');
     };
     
@@ -34,7 +34,7 @@ function Movies() {
                     <li key={index}>{movie}</li>
                 ))}
             </ul>
-            <button onClick={habdleBackClick}>Volver</button>
+            <button onClick={handleBackClick}>Volver</button>
         </div>
     );
 }
